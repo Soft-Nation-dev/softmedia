@@ -1,0 +1,247 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    height: 55px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 100;
+    border-bottom: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(214, 211, 211);
+
+
+    
+}
+
+.left-section{
+    display: flex;
+    align-items: center;
+
+}
+
+
+.middle-section{
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.right-section{
+width: 180px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-shrink: 0;
+margin-right: 20px;
+}
+
+.search-bar{
+    flex: 1;
+    height: 36px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    padding-left: 10px;
+    font-size: 16px;
+    width: 0;
+    border-width: 1px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar::placeholder{
+font-family: "roboto", arial;
+font-size: 16px;
+font-weight: 600;
+}
+
+.search-icon1{
+    height: 25px;
+}
+
+.search-icon, 
+.voice-search-icon,
+.upload,
+.youtube-apps,
+.notification{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+.search-icon .tooltip, 
+.voice-search-icon .tooltip,
+.upload .tooltip,
+.youtube-apps .tooltip,
+.notification .tooltip{
+    position: absolute;
+    background-color: grey;
+    color: white;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-family: "roboto", arial;
+    bottom: -30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    white-space: nowrap;
+}
+
+.search-icon:hover .tooltip,
+.voice-search-icon:hover .tooltip,
+.upload:hover .tooltip,
+.youtube-apps:hover .tooltip,
+.notification:hover .tooltip{
+    opacity: 1;
+
+}
+
+.notification-badge{
+    position: absolute;
+    top: -2px; 
+    background-color: rgb(206, 6, 6);
+    font-size: 11px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    font-family: "roboto", arial;
+    border-radius: 50%;
+    color: white;
+    right: -1px;
+    font-weight: 500;
+
+   
+
+}
+
+#ham-but{
+    /* width: 10px; */
+    margin-left: 24px;
+    margin-right: 24px;
+    border: none;
+    background-color: rgb(247, 247, 247);
+}
+.hamburger-menu{
+    height: 25px;
+  
+}
+
+.youtube-logo{
+    height: 20px;
+}
+
+.search-icon{
+    height: 40px;
+    width: 66px;
+    border: none;
+    background-color: rgb(240, 240, 240);
+    border-radius: 3px;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    margin-left: -1px;
+
+}
+
+
+.search-hover{
+    position: absolute;
+    bottom: 0;
+}
+
+.voice-search-icon{
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    border: none;
+}
+
+.voice-search-icon1{
+
+    height: 24px;
+}
+.upload-icon{
+    height: 25px;
+}
+.youtube-apps-icon{
+    height: 25px;
+}
+.notification-icon{
+    height: 25px;
+}
+.profile-picture{
+    height: 30px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+.side-bar{
+    background-color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 55px;
+    width: 74px;
+    padding-top: 5px;
+    z-index: 200;
+    
+}
+
+.sidebar-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 74px;
+    cursor: pointer;
+
+}
+.sidebar-content:hover{
+    background-color: rgb(189, 186, 186);
+    border-radius: 5px;
+}
+
+.sidebar-content img{
+    height: 24px;
+    margin-bottom: 5px;
+
+}
+
+.sidebar-text{
+    font-size: 10px;
+    font-family: "roboto", arial;
+}
+
+@media (min-width: 1000px) {
+    .sidebar-content{
+        flex-direction: row; 
+        justify-content: stretch;
+        padding-left: 8px;
+    }
+    .side-bar{
+        width: 150px;
+        padding-left: 50px;
+    }
+    .sidebar-text{
+        margin-left: 8px;
+    }
+}
